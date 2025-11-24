@@ -172,23 +172,7 @@ def apply_custom_theme():
         }
         </style>
 
-        <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/static/service-worker.js")
-            .then(() => console.log("Service Worker registered"))
-            .catch((error) => console.log("SW registration failed", error));
-        }
-
-        function requestNotificationPermission() {
-            if (Notification.permission !== "granted") {
-                Notification.requestPermission().then((permission) => {
-                    console.log("Notification permission:", permission);
-                });
-            }
-        }
-
-        requestNotificationPermission();
-        </script>
+        <script src="static/pwa.js"></script>
         """,
         unsafe_allow_html=True,
     )
