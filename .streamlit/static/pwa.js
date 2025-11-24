@@ -1,7 +1,7 @@
 console.log("PWA JS Loaded");
 
 if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("static/service-worker.js")
+    navigator.serviceWorker.register(".streamlit/static/service-worker.js")
     .then(reg => console.log("SW registered:", reg.scope))
     .catch(err => console.log("SW registration failed:", err));
 }
