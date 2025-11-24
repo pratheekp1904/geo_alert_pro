@@ -171,7 +171,13 @@ def apply_custom_theme():
             align-items: center;
         }
         </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
+    # Load external PWA enable script
+    st.markdown(
+        """
         <script src="static/pwa.js"></script>
         """,
         unsafe_allow_html=True,
